@@ -102,11 +102,6 @@ const VehicleList = () => {
   return (
     <div className="container">
       <AddVehicleForm onAddVehicle={onAddVehicle} />
-      {vehicles.length > 0 ? (
-        renderGroupedVehicles()
-      ) : (
-        <p>Nenhum veículo encontrado.</p>
-      )}
     </div>
   );
 };
