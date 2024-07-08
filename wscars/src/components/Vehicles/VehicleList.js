@@ -8,25 +8,22 @@ const VehicleList = () => {
 
   const fetchVehicles = async () => {
     try {
-      const response = await axios.get("https://jsonplaceholder.typicode.com/todos/1");
-      console.log(response.data);
-      setVehicles(response.data);
+      const response = await axios.get("https://wswork.com.br/cars.json");
+      setVehicles(response.data || []);
     } catch (error) {
       console.error("Erro ao buscar veículos:", error);
+      setVehicles([]); // Garantir que vehicles seja um array vazio em caso de erro
     }
   };
 
-  // Efeito para buscar veículos ao montar o componente
   useEffect(() => {
     fetchVehicles();
   }, []);
 
-  // Função para adicionar um novo veículo
   const onAddVehicle = (newVehicle) => {
     setVehicles((prevVehicles) => [...prevVehicles, newVehicle]);
   };
 
-  // Função para agrupar veículos por marca
   const groupByMarca = () => {
     const grouped = {};
     vehicles.forEach((vehicle) => {
@@ -38,13 +35,15 @@ const VehicleList = () => {
     return grouped;
   };
 
-  // Função para ordenar veículos por nome do modelo
   const sortVehicles = (vehicles) => {
     return vehicles.sort((a, b) => a.nome_modelo.localeCompare(b.nome_modelo));
   };
 
-  // Função para renderizar os veículos agrupados por marca
   const renderGroupedVehicles = () => {
+    if (vehicles.length === 0) {
+      return <p>Nenhum veículo encontrado.</p>;
+    }
+
     const groupedVehicles = groupByMarca();
     const sortedKeys = Object.keys(groupedVehicles).sort((a, b) =>
       a.localeCompare(b)
@@ -146,15 +145,10 @@ const VehicleList = () => {
     );
   };
 
-  // Renderização do componente VehicleList
   return (
     <div className="container">
       <AddVehicleForm onAddVehicle={onAddVehicle} />
-      {vehicles.length > 0 ? (
-        renderGroupedVehicles()
-      ) : (
-        <p>Nenhum veículo encontrado.</p>
-      )}
+      {renderGroupedVehicles()}
     </div>
   );
 };
