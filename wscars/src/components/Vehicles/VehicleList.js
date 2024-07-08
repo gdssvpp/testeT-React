@@ -9,7 +9,7 @@ const VehicleList = () => {
   // Função para buscar veículos
   const fetchVehicles = async () => {
     try {
-      const response = await axios.get('https://wswork.com.br/cars.json');
+      const response = await axios.get('https://wscars.vercel.app/cars');
       setVehicles(response.data.cars); 
     } catch (error) {
       console.error('Erro ao buscar veículos:', error);
