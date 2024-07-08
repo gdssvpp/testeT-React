@@ -1,25 +1,15 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import VehicleList from './components/Vehicles/VehicleList';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          first steps.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [vehicles] = useState([]);
+
+    return (
+        <div className="App">
+            <VehicleList vehicles={vehicles} />
+        </div>
+    );
 }
 
 export default App;
