@@ -21,6 +21,7 @@ Integração no Projeto Existente
 Dependências Necessárias:
 
 -> Certifique-se de que o projeto inclui React, Axios e Bootstrap.
+
  -> Axios:
  
   ![image](https://github.com/gdssvpp/testeT-React/assets/92610124/81297bd3-dcc6-4ff3-9299-dad792229043)
@@ -50,3 +51,9 @@ Utiliza Axios para realizar requisições HTTP à API externa que fornece os dad
 Considerações Finais
 Este projeto visa demonstrar o uso básico de React para criação de interfaces de usuário interativas, integrando com APIs externas e aplicando estilos responsivos através do Bootstrap. Certifique-se de ajustar as configurações de proxy e CORS conforme necessário para garantir o correto funcionamento da aplicação em diferentes ambientes de implantação.
 
+
+
+
+-> Imagem do produto
+
+![image](https://github.com/gdssvpp/testeT-React/assets/92610124/f37957a0-5ddf-463c-bef8-2c32bfd3d5eb)
