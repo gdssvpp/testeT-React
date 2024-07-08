@@ -8,7 +8,7 @@ const VehicleList = () => {
 
   const fetchVehicles = async () => {
     try {
-      const response = await axios.get("https://wswork.com.br/cars.json");
+      const response = await axios.get("https://wswork.com.br/cars_by_brand.json");
       setVehicles(response.data);
     } catch (error) {
       console.error("Erro ao buscar veículos:", error);
