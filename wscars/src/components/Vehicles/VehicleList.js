@@ -9,7 +9,7 @@ const VehicleList = () => {
   // Função para buscar veículos
   const fetchVehicles = async () => {
     try {
-      const response = await axios.get("/api/cars.json");
+      const response = await axios.get("https://wswork.com.br/cars.json");
       setVehicles(response.data.cars);
     } catch (error) {
       console.error("Erro ao buscar veículos:", error);
@@ -102,6 +102,11 @@ const VehicleList = () => {
   return (
     <div className="container">
       <AddVehicleForm onAddVehicle={onAddVehicle} />
+      {vehicles.length > 0 ? (
+        renderGroupedVehicles()
+      ) : (
+        <p>Nenhum veículo encontrado.</p>
+      )}
     </div>
   );
 };
