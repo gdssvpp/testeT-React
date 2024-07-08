@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const VehicleList = () => {
   const [vehicles, setVehicles] = useState([]);
 
-  // Função para buscar veículos
   const fetchVehicles = async () => {
     try {
       const response = await axios.get("/api/cars.json");

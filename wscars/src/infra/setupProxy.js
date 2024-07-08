@@ -7,7 +7,7 @@ module.exports = function(app) {
       target: 'https://wswork.com.br',
       changeOrigin: true,
       pathRewrite: {
-        '^/api': '', 
+        '^/api/(.+)': '/$1', 
       },
     })
   );
