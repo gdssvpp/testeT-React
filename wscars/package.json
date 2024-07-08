@@ -1,6 +1,7 @@
 {
   "name": "wscars",
   "version": "0.1.0",
+  "proxy": "https://wswork.com.br",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

@@ -8,7 +8,7 @@ const VehicleList = () => {
 
   const fetchVehicles = async () => {
     try {
-      const response = await axios.get("/api/cars.json");
+      const response = await axios.get("/cars.json");
       setVehicles(response.data);
     } catch (error) {
       console.error("Erro ao buscar veículos:", error);
