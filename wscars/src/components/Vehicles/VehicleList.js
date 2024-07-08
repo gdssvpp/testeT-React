@@ -9,13 +9,12 @@ const VehicleList = () => {
   // Função para buscar veículos
   const fetchVehicles = async () => {
     try {
-      const response = await axios.get('/api/cars.json');
-      setVehicles(response.data.cars); 
+      const response = await axios.get("https://wswork.com.br/cars.json");
+      setVehicles(response.data);
     } catch (error) {
-      console.error('Erro ao buscar veículos:', error);
+      console.error("Erro ao buscar veículos:", error);
     }
   };
-  
 
   // Efeito para buscar veículos ao montar o componente
   useEffect(() => {
@@ -78,12 +77,60 @@ const VehicleList = () => {
                         {sortVehicles(groupedVehicles[marca]).map(
                           (vehicle, index) => (
                             <tr key={index}>
-                              <td style={{ minWidth: "150px", padding: "8px", margin: "0" }}>{vehicle.nome_modelo}</td>
-                              <td style={{ minWidth: "80px", padding: "8px", margin: "0" }}>{vehicle.ano}</td>
-                              <td style={{ minWidth: "100px", padding: "8px", margin: "0" }}>{vehicle.cor}</td>
-                              <td style={{ minWidth: "120px", padding: "8px", margin: "0" }}>{vehicle.combustivel}</td>
-                              <td style={{ minWidth: "100px", padding: "8px", margin: "0" }}>{vehicle.num_portas}</td>
-                              <td style={{ minWidth: "100px", padding: "8px", margin: "0" }}>{vehicle.valor}</td>
+                              <td
+                                style={{
+                                  minWidth: "150px",
+                                  padding: "8px",
+                                  margin: "0",
+                                }}
+                              >
+                                {vehicle.nome_modelo}
+                              </td>
+                              <td
+                                style={{
+                                  minWidth: "80px",
+                                  padding: "8px",
+                                  margin: "0",
+                                }}
+                              >
+                                {vehicle.ano}
+                              </td>
+                              <td
+                                style={{
+                                  minWidth: "100px",
+                                  padding: "8px",
+                                  margin: "0",
+                                }}
+                              >
+                                {vehicle.cor}
+                              </td>
+                              <td
+                                style={{
+                                  minWidth: "120px",
+                                  padding: "8px",
+                                  margin: "0",
+                                }}
+                              >
+                                {vehicle.combustivel}
+                              </td>
+                              <td
+                                style={{
+                                  minWidth: "100px",
+                                  padding: "8px",
+                                  margin: "0",
+                                }}
+                              >
+                                {vehicle.num_portas}
+                              </td>
+                              <td
+                                style={{
+                                  minWidth: "100px",
+                                  padding: "8px",
+                                  margin: "0",
+                                }}
+                              >
+                                {vehicle.valor}
+                              </td>
                             </tr>
                           )
                         )}

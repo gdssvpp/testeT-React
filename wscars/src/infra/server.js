@@ -1,22 +1,24 @@
-const express = require('express');
-const cors = require('cors');
-const axios = require('axios');
+const express = require("express");
+const cors = require("cors");
+const axios = require("axios");
 
 const app = express();
 
-app.use(cors({
-  origin: 'https://wscars.vercel.app',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type'], 
-}));
+app.use(
+  cors({
+    origin: "https://wscars.vercel.app",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 
-app.get('/cars', async (req, res) => {
+app.get("/cars", async (req, res) => {
   try {
-    const response = await axios.get('https://wswork.com.br/cars.json');
-    res.json(response.data);
+    const response = await axios.get("https://wswork.com.br/cars.json");
+    setVehicles(response.data.cars);
   } catch (error) {
-    console.error('Erro ao buscar veículos:', error);
-    res.status(500).json({ error: 'Erro ao buscar veículos' });
+    console.error("Erro ao buscar veículos:", error);
+    res.status(500).json({ error: "Erro ao buscar veículos" });
   }
 });
 
