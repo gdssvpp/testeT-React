@@ -6,8 +6,8 @@ module.exports = function(app) {
     createProxyMiddleware({
       target: 'https://wswork.com.br',
       changeOrigin: true,
-      pathRewrite: {
-        '^/api/(.+)': '/$1', 
+      pathRewrite: function (path, req) {
+        return path.replace('/api/', 'https://wswork.com.br/');
       },
     })
   );
