@@ -22,9 +22,12 @@ Dependências Necessárias:
 
 -> Certifique-se de que o projeto inclui React, Axios e Bootstrap.
  -> Axios:
+ 
   ![image](https://github.com/gdssvpp/testeT-React/assets/92610124/81297bd3-dcc6-4ff3-9299-dad792229043)
 
  -> Bootstrap:
+
+ 
    ![image](https://github.com/gdssvpp/testeT-React/assets/92610124/defde3b2-35c6-4495-82ea-2b4988f3d96c)
 
 
