@@ -9,12 +9,13 @@ const VehicleList = () => {
   // Função para buscar veículos
   const fetchVehicles = async () => {
     try {
-      const response = await axios.get("/api/cars.json");
-      setVehicles(response.data.cars);
+      const response = await axios.get('https://wscars.vercel.app/cars');
+      setVehicles(response.data.cars); 
     } catch (error) {
-      console.error("Erro ao buscar veículos:", error);
+      console.error('Erro ao buscar veículos:', error);
     }
   };
+  
 
   // Efeito para buscar veículos ao montar o componente
   useEffect(() => {

@@ -5,9 +5,9 @@ const axios = require('axios');
 const app = express();
 
 app.use(cors({
-  origin: 'https://wscars.vercel.app', 
-  methods: ['GET', 'POST'], 
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: 'https://wscars.vercel.app',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'], 
 }));
 
 app.get('/cars', async (req, res) => {
