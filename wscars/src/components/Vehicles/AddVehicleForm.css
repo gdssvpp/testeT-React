@@ -1,17 +1,7 @@
-.vehicle-group {
-    margin-bottom: 20px;
+tr, td {
+    text-align: center !important; 
 }
 
-.vehicle-group table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.vehicle-group th, .vehicle-group td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-.vehicle-group th {
-    background-color: #f2f2f2;
+.vehicleList {
+    text-align: center;
 }

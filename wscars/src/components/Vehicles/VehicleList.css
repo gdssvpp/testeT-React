@@ -17,30 +17,17 @@
     background-color: #fdfdfd;
 }
 
-.card-header {
-    text-align: center;
-}
-
-.vehicle-group th:nth-child(1), .vehicle-group td:nth-child(1) {
-    width: 20%;
-}
-
-.vehicle-group th:nth-child(2), .vehicle-group td:nth-child(2) {
-    width: 10%;
-}
-
-.vehicle-group th:nth-child(3), .vehicle-group td:nth-child(3) {
-    width: 10%;
-}
-
-.vehicle-group th:nth-child(4), .vehicle-group td:nth-child(4) {
-    width: 20%;
-}
-
-.vehicle-group th:nth-child(5), .vehicle-group td:nth-child(5) {
-    width: 20%;
-}
-
-.vehicle-group th:nth-child(6), .vehicle-group td:nth-child(6) {
-    width: 20%;
-}
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .custom-cell {
+    margin: 0;
+  }

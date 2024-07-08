@@ -49,14 +49,14 @@ const VehicleList = () => {
         <div className="col-sm-12">
           <div className="card">
             <div className="card-header">
-              <h2 className="my-4">Listagem de Veículos</h2>
+              <h2 className="my-4 vehicleList">Listagem de Veículos</h2>
             </div>
             <div className="card-body">
               {sortedKeys.map((marca) => (
                 <div key={marca} className="mb-4">
                   <h5 className="card-title">Marca: {marca}</h5>
                   <div className="table-responsive">
-                    <table className="table table-dark table-striped">
+                    <table className="table table-dark table-striped table-hover">
                       <thead>
                         <tr>
                           <th>Modelo</th>
@@ -71,12 +71,12 @@ const VehicleList = () => {
                         {sortVehicles(groupedVehicles[marca]).map(
                           (vehicle, index) => (
                             <tr key={index}>
-                              <td>{vehicle.nome_modelo}</td>
-                              <td>{vehicle.ano}</td>
-                              <td>{vehicle.cor}</td>
-                              <td>{vehicle.combustivel}</td>
-                              <td>{vehicle.num_portas}</td>
-                              <td>{vehicle.valor}</td>
+                              <td style={{ minWidth: "150px", padding: "8px", margin: "0" }}>{vehicle.nome_modelo}</td>
+                              <td style={{ minWidth: "80px", padding: "8px", margin: "0" }}>{vehicle.ano}</td>
+                              <td style={{ minWidth: "100px", padding: "8px", margin: "0" }}>{vehicle.cor}</td>
+                              <td style={{ minWidth: "120px", padding: "8px", margin: "0" }}>{vehicle.combustivel}</td>
+                              <td style={{ minWidth: "100px", padding: "8px", margin: "0" }}>{vehicle.num_portas}</td>
+                              <td style={{ minWidth: "100px", padding: "8px", margin: "0" }}>{vehicle.valor}</td>
                             </tr>
                           )
                         )}
@@ -95,7 +95,6 @@ const VehicleList = () => {
   return (
     <div className="container">
       <AddVehicleForm onAddVehicle={onAddVehicle} />
-
       {vehicles.length > 0 ? (
         renderGroupedVehicles()
       ) : (
