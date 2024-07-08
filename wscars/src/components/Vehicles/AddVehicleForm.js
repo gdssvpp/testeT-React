@@ -29,6 +29,7 @@ const AddVehicleForm = ({ onAddVehicle }) => {
     }
   };
 
+  // regra sem e . , nos inputs de numero
   const handleKeyDown = (e) => {
     if (e.key === "e" || e.key === "." || e.key === ",") {
       e.preventDefault();
