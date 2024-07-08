@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import VehicleList from './components/Vehicles/VehicleList';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [vehicles] = useState([]);
