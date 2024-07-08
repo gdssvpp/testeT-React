@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/:path*",
+        "destination": "https://wswork.com.br/:path*",
+        "headers": {
+          "Access-Control-Allow-Origin": "https://wscars.vercel.app",
+          "Access-Control-Allow-Methods": "GET, POST",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        }
+      }
+    ]
+  }
